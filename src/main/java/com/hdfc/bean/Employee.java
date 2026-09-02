@@ -3,6 +3,7 @@ package com.hdfc.bean;
 import com.hdfc.service.NotificationService;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -19,6 +20,7 @@ public class Employee {
     private NotificationService notificationService;//---> field injection
 
     @Autowired
+    @Qualifier("getNames")
     private List<String> cities;
 
 

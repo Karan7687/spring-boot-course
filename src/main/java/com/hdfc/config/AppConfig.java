@@ -19,4 +19,10 @@ public class AppConfig {
         List<String> cities = new ArrayList<>(List.of("delhi", "mumbai", "Pune"));
         return cities;
     }
+    @Bean
+    public List<String> getNames() {
+
+        List<String> cities = new ArrayList<>(List.of("A", "B", "C"));
+        return cities;
+    }
 }
