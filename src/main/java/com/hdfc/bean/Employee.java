@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class Employee {
     @Value("Karan")
@@ -13,12 +15,14 @@ public class Employee {
     @Value(value="60000")
     private double sal;
 
-    @PostConstruct
-    public void init(){
-        System.out.println("Init logic");
-    }
     @Autowired
     private NotificationService notificationService;//---> field injection
+
+    @Autowired
+    private List<String> cities;
+
+
+
 
     //constructor injection
     public Employee(NotificationService notificationService) {
@@ -29,6 +33,9 @@ public class Employee {
         System.out.println(name);
         System.out.println(sal);
         notificationService.sendNotification();
+        System.out.println(cities);
     }
+
+
 
 }

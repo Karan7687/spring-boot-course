@@ -16,12 +16,17 @@ public class App {
 
         Employee emp=applicationContext.getBean(Employee.class);
         emp.display();
+
     }
 }
 
 /*
-@PostConstruct
-- resource allocation
-- connection
-- file reading
+- @Bean helps is creating object manually
+- applied on methods returning objects
+- that object can be injected after
+
+- method name= id (default)
+- that method must be inside class annoted @Configuration
+
+
  */
