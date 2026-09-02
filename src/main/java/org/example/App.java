@@ -18,3 +18,10 @@ public class App {
         emp.display();
     }
 }
+
+/*
+@PostConstruct
+- resource allocation
+- connection
+- file reading
+ */
