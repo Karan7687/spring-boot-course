@@ -1,0 +1,11 @@
+package com.hdfc.config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = "com.hdfc")
+
+
+public class AppConfig {
+}
